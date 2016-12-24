@@ -3,6 +3,10 @@ package com.att.demo.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Rohit
+ *
+ */
 public class User {
 
 	private long id;
