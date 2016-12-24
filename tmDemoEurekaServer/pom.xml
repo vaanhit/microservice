@@ -4,17 +4,17 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.att.demo</groupId>
-	<artifactId>tmDemoUserDashboard</artifactId>
+	<artifactId>tmDemoEurekaServer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>tmDemoUserDashboard</name>
-	<description>Demo User Dashboard for Spring Boot</description>
+	<name>tmDemoEurekaServer</name>
+	<description>Demo project for Eureka server.</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.2.RELEASE</version>
+		<version>1.4.3.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -26,19 +26,8 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.att.demo</groupId>
-			<artifactId>tmDemoClient</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
 
 		<dependency>
@@ -58,9 +47,13 @@
 				<scope>import</scope>
 			</dependency>
 
-			<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-dependencies</artifactId> 
-				<version>Brixton.RELEASE</version> <type>pom</type> <scope>import</scope> 
-				</dependency> -->
+			<!-- <dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Brixton.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency> -->
 		</dependencies>
 	</dependencyManagement>
 
@@ -91,6 +84,5 @@
 			</snapshots>
 		</repository>
 	</repositories>
-
 
 </project>

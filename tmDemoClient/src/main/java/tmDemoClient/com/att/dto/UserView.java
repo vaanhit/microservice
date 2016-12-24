@@ -4,8 +4,10 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+
 /**
- * Created by bartoszjedrzejewski on 08/06/2016.
+ * @author Rohit
+ *
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserView {

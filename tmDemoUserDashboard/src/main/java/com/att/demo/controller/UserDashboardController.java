@@ -8,7 +8,8 @@ import org.springframework.web.client.RestTemplate;
 import tmDemoClient.com.att.dto.UserView;
 
 /**
- * Created by bartoszjedrzejewski on 09/06/2016.
+ * @author Rohit
+ *
  */
 @RestController
 public class UserDashboardController {
