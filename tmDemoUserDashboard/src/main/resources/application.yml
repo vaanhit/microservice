@@ -5,8 +5,7 @@
 spring:
   application:
     name: dashboardservice
-    
-cloud:
+  cloud:
     config:
       uri: http://localhost:8888
 
