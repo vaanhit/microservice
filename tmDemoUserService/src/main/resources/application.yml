@@ -1,11 +1,16 @@
-server:
-  port: 8091
+# Handling through Centralized config
+#server:
+#  port: 8091
   
 spring:
   application:
     name: userservice
-    
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+  cloud:
+    config:
+      uri: http://localhost:8888 
+
+# Handling through Centralized cinfig
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/

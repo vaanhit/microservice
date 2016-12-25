@@ -46,6 +46,29 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- tag: For all argument constructor. fix later -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.6</version>
+		</dependency>
+		<!-- end: For all argument constructor. fix later -->
+
+		<!-- tag:For configuring client. Centralized configuration. -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<!-- end:For configuring client. Centralized configuration. -->
+
+		<!-- tag: To see the properties from the cloud config. localhost:{port}/env -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- end: To see the properties from the cloud config. localhost:{port}/env -->
+
 	</dependencies>
 
 	<dependencyManagement>
