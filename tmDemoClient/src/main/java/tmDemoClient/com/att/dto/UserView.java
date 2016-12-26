@@ -1,7 +1,6 @@
 package tmDemoClient.com.att.dto;
 
-import java.util.List;
-
+import java.util.ArrayList;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
@@ -16,7 +15,7 @@ public class UserView {
 	private String fName;
 	private String lName;
 	private String organisation;
-	private List<String> notifications;
+	private ArrayList<String> notifications;
 	private int points;
 
 	public long getId() {
@@ -35,7 +34,7 @@ public class UserView {
 		return organisation;
 	}
 
-	public List<String> getNotifications() {
+	public ArrayList<String> getNotifications() {
 		return notifications;
 	}
 

@@ -1,32 +1,51 @@
 package com.att.demo.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  * @author Rohit
  *
  */
-public class User {
+@Entity
+public class User implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue
 	private long id;
+
 	private String fName;
 	private String lName;
 	private String organisation;
-	private List<String> notifications;
+	private ArrayList<String> notifications;
 	private int points;
 
-	// Friends are deprecated and should not be used
-	private List<String> friends;
+	/**
+	 * @param id
+	 * @param fName
+	 * @param lName
+	 * @param organisation
+	 * @param notification
+	 * @param points
+	 */
+	public User(String fName, String lName, String organisation, ArrayList<String> notification, int points) {
 
-	public User(int id, String fName, String lName, String organisation, List<String> notification, int points) {
-
-		this.id = id;
 		this.fName = fName;
 		this.lName = lName;
 		this.organisation = organisation;
 		this.notifications = notification;
 		this.points = points;
+	}
+
+	public User() {
+
 	}
 
 	public long getId() {
@@ -61,11 +80,11 @@ public class User {
 		this.organisation = organisation;
 	}
 
-	public List<String> getNotifications() {
+	public ArrayList<String> getNotifications() {
 		return notifications;
 	}
 
-	public void setNotifications(List<String> notifications) {
+	public void setNotifications(ArrayList<String> notifications) {
 		this.notifications = notifications;
 	}
 
@@ -75,14 +94,6 @@ public class User {
 
 	public void setPoints(int points) {
 		this.points = points;
-	}
-
-	public List<String> getFriends() {
-		return friends;
-	}
-
-	public void setFriends(List<String> friends) {
-		this.friends = friends;
 	}
 
 }

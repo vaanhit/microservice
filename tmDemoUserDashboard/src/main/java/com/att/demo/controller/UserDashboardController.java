@@ -14,11 +14,15 @@ import tmDemoClient.com.att.dto.UserView;
 @RestController
 public class UserDashboardController {
 
+	/**
+	 * @param id
+	 * @return
+	 */
 	@RequestMapping("/dashboard")
 	public String getUser(@RequestParam(value = "id", defaultValue = "1") int id) {
 		RestTemplate restTemplate = new RestTemplate();
 		UserView user = restTemplate.getForObject("http://localhost:8091/user?id=" + id, UserView.class);
-		return "USER DASHBOARD <br>" + "Welcome " + user.getfName() + " " + user.getlName() + "<br>" + "You have "
+		return "USER DASHBOARD " + "Welcome " + user.getfName() + " " + user.getlName() + "<br>" + "You have "
 				+ user.getPoints() + " points! Good job!<br>" + "<br>" + "<br>" + user.getOrganisation();
 	}
 

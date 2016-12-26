@@ -76,6 +76,18 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<!-- end: To see the properties from the cloud config. localhost:{port}/env -->
+		
+	<!-- 	<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-entitymanager</artifactId>
+    <version>5.2.3.Final</version>
+</dependency>
+
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>4.1.4.Final</version>
+</dependency> -->
 
 	</dependencies>
 

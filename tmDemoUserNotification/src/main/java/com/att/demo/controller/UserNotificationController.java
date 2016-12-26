@@ -14,6 +14,10 @@ import tmDemoClient.com.att.dto.UserView;
 @RestController
 public class UserNotificationController {
 
+	/**
+	 * @param id
+	 * @return
+	 */
 	@RequestMapping("/notification")
 	public String getUser(@RequestParam(value = "id", defaultValue = "1") int id) {
 

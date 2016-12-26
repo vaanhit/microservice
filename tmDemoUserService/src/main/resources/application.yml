@@ -8,6 +8,8 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888 
+#  profiles:
+#    active: test
 
 # Handling through Centralized cinfig
 #eureka:
