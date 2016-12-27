@@ -4,18 +4,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.att.demo</groupId>
-	<artifactId>tmDemoUserNotification</artifactId>
+	<artifactId>tmDemohystrixDashboard</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>tmDemoUserNotification</name>
-	<description>Demo Notification for Spring Boot</description>
+	<name>tmDemohystrixDashboard</name>
+	<description>Demo project Hystrix dashboard to showcase Circut Breaker services.</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.2.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<version>1.4.3.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -25,21 +25,13 @@
 	</properties>
 
 	<dependencies>
-
-		<dependency>
-			<groupId>com.att.demo</groupId>
-			<artifactId>tmDemoClient</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
 		</dependency>
-
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-turbine</artifactId>
 		</dependency>
 
 		<dependency>
@@ -47,22 +39,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-		<!-- tag: For Hystrix support -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-hystrix</artifactId>
-		</dependency>
-		<!-- end: For Hystrix support -->
-
-		<!-- tag: For all argument constructor. fix later -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.16.6</version>
-		</dependency>
-		<!-- end: For all argument constructor. fix later -->
-
+		
 		<!-- tag:For configuring client. Centralized configuration. -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -76,7 +53,6 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<!-- end: To see the properties from the cloud config. localhost:{port}/env -->
-
 	</dependencies>
 
 	<dependencyManagement>
@@ -88,10 +64,6 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-
-			<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-dependencies</artifactId> 
-				<version>Brixton.RELEASE</version> <type>pom</type> <scope>import</scope> 
-				</dependency> -->
 		</dependencies>
 	</dependencyManagement>
 
@@ -122,6 +94,5 @@
 			</snapshots>
 		</repository>
 	</repositories>
-
 
 </project>

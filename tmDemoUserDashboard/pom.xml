@@ -47,6 +47,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- tag: For Hystrix support -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
+		</dependency>
+		<!-- end: For Hystrix support -->
+
 		<!-- tag: For all argument constructor. fix later -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
