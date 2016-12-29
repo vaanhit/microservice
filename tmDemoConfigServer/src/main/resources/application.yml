@@ -1,14 +1,25 @@
 server:
   port: 8888      
-
+# Set configurationfile from localsystem.
 spring:
+  profiles:
+    active: native
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/vaanhit/microservice
-          search-paths:
-           - config 
+        native:
+          search-locations: ../config/
+            
+##########################################################
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: C:/WORK_ENV/workspace/microservice/ 
+          #https://github.com/vaanhit/microservice
+#          search-paths:
+#           - config 
             
             
             
