@@ -1,11 +1,15 @@
-server:
-  port: 8094
+# Handling through Centralized config
+#server:
+#  port: 8094
   
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: web
+  cloud:
+    config:
+      uri: http://localhost:8888
 
-zuul:
-  routes:
-    userservice: /usersSer/**
+# Handling through Centralized config
+#zuul:
+#  routes:
+#    userservice: /usersSer/**
