@@ -1,0 +1,11 @@
+server:
+  port: 8094
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    userservice: /usersSer/**
